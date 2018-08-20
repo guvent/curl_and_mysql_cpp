@@ -36,7 +36,7 @@ void insert_record()
     
     int result;
     
-    connect = sql_connect("localhost","root","","testdb");
+    connect = sql_connect("localhost","root","","testdb","3306");
     
     char* command = "INSERT INTO testtable (field1,field2,field3) VALUES ('yeni kayıt','2017-09-08',60), ('yeni kayıt','2017-09-08',60);";
     
@@ -51,7 +51,7 @@ void get_table1()
     sql::Connection *connect;
     sql::ResultSet *resultset;
     
-    connect = sql_connect("localhost","root","","testdb");
+    connect = sql_connect("localhost","root","","testdb","3306");
         
     resultset = sql_query("SELECT * FROM testtable",connect);
     
@@ -66,7 +66,7 @@ void get_table2()
     sql::Connection *connect;
     sql::ResultSet *resultset;
     
-    connect = sql_connect("localhost","root","","testdb");
+    connect = sql_connect("localhost","root","","testdb","3306");
     
     resultset = sql_query("SELECT * FROM testtable",connect);
     
